@@ -1141,9 +1141,9 @@ static int sunxi_update_bl(struct backlight_device *bdev)
 
 	int brightness = bdev->props.brightness;
 
-	if (bdev->props.power != FB_BLANK_UNBLANK ||
-		bdev->props.state & (BL_CORE_SUSPENDED | BL_CORE_FBBLANK))
-		brightness = 0;
+// 	if (bdev->props.power != FB_BLANK_UNBLANK ||
+// 		bdev->props.state & (BL_CORE_SUSPENDED | BL_CORE_FBBLANK))
+// 		brightness = 0;
 
 	if (!sunxi_panel->panel_ops->bright_light(sunxi_panel, brightness)) {
 		return -EINVAL;
