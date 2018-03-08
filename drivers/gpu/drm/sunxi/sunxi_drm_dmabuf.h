@@ -25,4 +25,6 @@ struct dma_buf *sunxi_dmabuf_prime_export(struct drm_device *drm_dev,
 struct drm_gem_object *sunxi_dmabuf_prime_import(struct drm_device *drm_dev,
 	struct dma_buf *dma_buf);
 
+int sunxi_drm_cache_control_ioctl(struct drm_device *dev, void *data,
+				struct drm_file *file_priv);
 #endif

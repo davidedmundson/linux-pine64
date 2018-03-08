@@ -173,6 +173,9 @@ static struct drm_ioctl_desc sunxi_ioctls[] = {
 		DRM_UNLOCKED | DRM_AUTH),
 	DRM_IOCTL_DEF_DRV(SUNXI_INFO_FB_PLANE, sunxi_drm_info_fb_ioctl,
 		DRM_UNLOCKED | DRM_AUTH),
+    DRM_IOCTL_DEF_DRV(SUNXI_CACHE_CONTROL, sunxi_drm_cache_control_ioctl,
+		DRM_UNLOCKED | DRM_AUTH),
+
 };
 
 static const struct file_operations sunxi_drm_driver_fops = {

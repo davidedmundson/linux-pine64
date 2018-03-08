@@ -313,3 +313,19 @@ err_buf_detach:
 
 	return ERR_PTR(ret);
 }
+
+
+int sunxi_drm_cache_control_ioctl(struct drm_device *dev, void *data,
+				struct drm_file *file_priv)
+{
+	int ret = 0;
+    struct sunxi_cache_control_cmd *cmd;
+	struct dma_buf *dma_buf;
+    cmd = (struct sunxi_cache_control_cmd *)data;
+    printk("DAVE - my IOCTL HAS BEEN CALLED!! %d\n", cmd->fd);
+
+    //get dma from fd
+
+// 	dma_buf = dma_buf_get(prime_fd);
+    return ret;
+}
